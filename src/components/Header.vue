@@ -8,6 +8,7 @@ import HeroText from "./HeroText.vue";
     <img
       class="absolute -z-10"
       src="@/assets/hero-image.png"
+      loading="lazy"
       alt="hero-image"
       style="height: 100vh; width: 100vw"
     />

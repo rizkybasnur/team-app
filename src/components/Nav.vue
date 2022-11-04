@@ -1,7 +1,12 @@
 <template>
   <div class="flex justify-between items-center px-6 md:px-36 py-6">
     <a class="cursor-pointer" @click="$router.push('/')">
-      <img src="@/assets/logo.svg" class="logo" alt="Vite logo" />
+      <img
+        src="@/assets/logo.svg"
+        loading="lazy"
+        class="logo"
+        alt="Vite logo"
+      />
     </a>
     <div
       class="gap-10 items-center hidden md:flex"

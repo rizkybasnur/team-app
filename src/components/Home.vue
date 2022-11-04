@@ -10,7 +10,7 @@
     <div class="flex justify-center items-center">
       <div class="md:w-96 flex flex-col gap-8 md:text-start text-center">
         <div class="heading-1">Your hub for teamwork</div>
-        <div class="md:hidden justify-end">
+        <div class="md:hidden justify-end" data-aos="fade-up">
           <img
             src="@/assets/teamwork-image.png"
             alt="teamwork-image"
@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="hidden md:flex justify-end">
+    <div class="hidden md:flex justify-end" data-aos="fade-up">
       <img
         src="@/assets/teamwork-image.png"
         alt="teamwork-image"
@@ -42,7 +42,7 @@
     class="px-6 md:px-0 md:grid md:grid-cols-2 gap-4"
     style="margin-top: 152px"
   >
-    <div class="hidden md:flex justify-end">
+    <div class="hidden md:flex justify-end" data-aos="fade-up">
       <img
         src="@/assets/simpletask-image.png"
         alt="simpletask-image"
@@ -53,7 +53,7 @@
     <div class="flex justify-center items-center">
       <div class="md:w-96 flex flex-col gap-8 md:text-start text-center">
         <div class="heading-1">Simple task management</div>
-        <div class="md:hidden justify-end">
+        <div class="md:hidden justify-end" data-aos="fade-up">
           <img
             src="@/assets/simpletask-image.png"
             alt="simpletask-image"
@@ -79,7 +79,7 @@
     <div class="flex-col md:flex justify-center items-center">
       <div class="md:w-96 flex flex-col gap-8 md:text-start text-center">
         <div class="heading-1">Scheduling that actually works</div>
-        <div class="md:hidden justify-start">
+        <div class="md:hidden justify-start" data-aos="fade-up">
           <img
             src="@/assets/scheduling-image.png"
             alt="scheduling-image"
@@ -96,7 +96,7 @@
         </div>
       </div>
     </div>
-    <div class="hidden md:flex justify-start">
+    <div class="hidden md:flex justify-start" data-aos="fade-up">
       <img
         src="@/assets/scheduling-image.png"
         alt="scheduling-image"

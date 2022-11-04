@@ -19,7 +19,12 @@ const tes = () => {
     <div class="grid grid-cols-12 gap-6">
       <div class="col-span-12 md:col-span-3">
         <a class="cursor-pointer" @click="$router.push('/')">
-          <img src="@/assets/logo.svg" class="logo" alt="Vite logo" />
+          <img
+            src="@/assets/logo.svg"
+            loading="lazy"
+            class="logo"
+            alt="Vite logo"
+          />
         </a>
         <div class="body-2 text-gray-2 mt-4" style="max-width: 168px">
           Collaboration platform modern teams.

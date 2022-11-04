@@ -3,10 +3,13 @@ import "./style.css";
 import App from "./pages/App.vue";
 import router from "./router.js";
 import Notifications from "@kyvg/vue3-notification";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const app = createApp(App);
 app.use(router);
 app.use(Notifications);
+app.use(AOS.init());
 
 // app.directive("click-outside", {
 //   mounted(el, binding, vnode) {
