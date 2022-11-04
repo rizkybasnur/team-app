@@ -23,18 +23,18 @@
     </div>
     <div class="md:hidden items-center">
       <button
-        v-if="isMenu"
-        @click="isMenu = false"
-        :class="no ? 'text-black-60' : 'text-white'"
-      >
-        <i class="mdi mdi-align-vertical-distribute cursor-pointer text-3xl" />
-      </button>
-      <button
         v-if="!isMenu"
         @click="isMenu = true"
         :class="no ? 'text-black-60' : 'text-white'"
       >
-        <i class="mdi mdi-arrow-right cursor-pointer text-3xl" />
+        <i class="mdi mdi-format-align-justify cursor-pointer text-3xl" />
+      </button>
+      <button
+        v-if="isMenu"
+        @click="isMenu = false"
+        :class="no ? 'text-black-60' : 'text-white'"
+      >
+        <i class="mdi mdi-close-outline cursor-pointer text-3xl" />
       </button>
     </div>
   </div>
@@ -42,22 +42,22 @@
     ref="target"
     class="md:hidden text-center fixed w-full"
     :class="
-      isMenu
-        ? 'transform translate-x-full duration-500 overflow-hidden'
-        : ' transform  duration-500'
+      !isMenu
+        ? 'transform translate-x-full duration-300 overflow-hidden'
+        : ' transform  duration-300'
     "
   >
-    <ul class="bg-white w-full">
-      <li class="hover:bg-purple p-4 text-purple hover:text-white" @click="tes">
+    <ul class="bg-purple h-screen">
+      <li class="hover:bg-white p-4 text-white hover:text-purple" @click="tes">
         Product
       </li>
-      <li class="hover:bg-purple p-4 text-purple hover:text-white" @click="tes">
+      <li class="hover:bg-white p-4 text-white hover:text-purple" @click="tes">
         Services
       </li>
-      <li class="hover:bg-purple p-4 text-purple hover:text-white" @click="tes">
+      <li class="hover:bg-white p-4 text-white hover:text-purple" @click="tes">
         Contact
       </li>
-      <li class="hover:bg-purple p-4 text-purple hover:text-white" @click="tes">
+      <li class="hover:bg-white p-4 text-white hover:text-purple" @click="tes">
         Sign-in
       </li>
     </ul>
@@ -77,10 +77,10 @@ const target = ref(null);
 const isMenu = ref(false);
 const { notify } = useNotification();
 
-onClickOutside(target, (event) => (isMenu.value = true));
+onClickOutside(target, (event) => (isMenu.value = false));
 
 const tes = (e) => {
-  isMenu.value = true;
+  isMenu.value = false;
   notify({
     text: "Fitur belum tersedia",
     type: "error",
