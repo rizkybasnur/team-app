@@ -23,6 +23,7 @@ import Nav from "@/components/Nav.vue";
           <img
             src="@/assets/image.svg"
             class="logo rounded-t-lg"
+            loading="lazy"
             alt="Vite logo"
             style="width: 100%"
           />

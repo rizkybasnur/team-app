@@ -30,14 +30,29 @@ import Nav from "@/components/Nav.vue";
           <div class="flex items-center">
             <div class="body-2 text-gray-1">Share</div>
             <div>
-              <img src="@/assets/whatsapp.svg" class="ml-4" alt="Vite logo" />
+              <img
+                src="@/assets/whatsapp.svg"
+                loading="lazy"
+                class="ml-4"
+                alt="Vite logo"
+              />
             </div>
             <div>
-              <img src="@/assets/facebook.svg" class="ml-2" alt="Vite logo" />
+              <img
+                src="@/assets/facebook.svg"
+                loading="lazy"
+                class="ml-2"
+                alt="Vite logo"
+              />
             </div>
 
             <div>
-              <img src="@/assets/twitter.svg" class="ml-2" alt="Vite logo" />
+              <img
+                src="@/assets/twitter.svg"
+                loading="lazy"
+                class="ml-2"
+                alt="Vite logo"
+              />
             </div>
           </div>
         </div>
@@ -47,6 +62,7 @@ import Nav from "@/components/Nav.vue";
     <img
       src="@/assets/imagedetail.svg"
       class=""
+      loading="lazy"
       alt="Vite logo"
       style="width: 100%"
     />
