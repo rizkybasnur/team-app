@@ -15,7 +15,16 @@
       <div class="cursor-pointer" @click="tes">Product</div>
       <router-link class="cursor-pointer" to="/services">Services</router-link>
       <div class="cursor-pointer" @click="tes">Contact</div>
-      <div class="cursor-pointer" @click="tes">Sign in</div>
+      <div
+        v-if="!isLoggedIn"
+        class="cursor-pointer"
+        @click="$router.push('sign-in')"
+      >
+        Sign in
+      </div>
+      <div v-if="isLoggedIn" class="cursor-pointer" @click="handleSignOut">
+        Sign out
+      </div>
       <div class="cursor-pointer">
         <button
           class="bg-transparent font-semibold py-3 px-6 border rounded"
@@ -72,8 +81,32 @@
 
 <script setup>
 import { useNotification } from "@kyvg/vue3-notification";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { onClickOutside } from "@vueuse/core";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+const isLoggedIn = ref(false);
+
+let auth;
+onMounted(() => {
+  auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      isLoggedIn.value = true;
+    } else {
+      isLoggedIn.value = false;
+    }
+  });
+});
+
+const handleSignOut = () => {
+  signOut(auth).then(() => {
+    router.push("/");
+  });
+};
+
 const props = defineProps({
   no: Boolean,
 });

@@ -1,8 +1,4 @@
 <template>
-  <div>
-    <Header style="height: 100vh" />
-  </div>
-
   <div
     class="px-6 md:px-0 md:grid md:md:grid-cols-2 gap-4"
     style="margin-top: 152px"

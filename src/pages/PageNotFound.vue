@@ -1,5 +1,4 @@
 <template>
-  <Nav no="true" />
   <div
     class="w-full flex justify-center items-center"
     style="margin-top: 200px"
@@ -8,8 +7,6 @@
   </div>
 </template>
 
-<script setup>
-import Nav from "@/components/Nav.vue";
-</script>
+<script setup></script>
 
 <style scoped></style>

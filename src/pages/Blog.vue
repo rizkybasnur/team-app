@@ -1,9 +1,6 @@
-<script setup>
-import Nav from "@/components/Nav.vue";
-</script>
+<script setup></script>
 
 <template>
-  <Nav :no="true" />
   <div class="px-6 sm:px-36 mt-6 md:mt-24">
     <div>
       <div class="heading-1">Blog</div>
